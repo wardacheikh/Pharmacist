@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FournisseurController">
+   <children>
+      <Pane layoutX="14.0" layoutY="17.0" prefHeight="37.0" prefWidth="560.0" style="-fx-background-color: A6BB8D;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="14.0">
+         <opaqueInsets>
+            <Insets left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <children>
+            <Label layoutX="279.0" layoutY="9.0" text="gestion de stock des fournisseurs" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_home" layoutX="674.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#switchtoHome" text="Accueil" />
+         </children>
+      </Pane>
+      <Label layoutX="248.0" layoutY="102.0" prefHeight="17.0" prefWidth="65.0" text="ID             :" />
+      <TextField fx:id="txt_cin" layoutX="316.0" layoutY="98.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="239.0" layoutY="138.0" prefHeight="17.0" prefWidth="76.0" text="Nom           :" />
+      <TextField fx:id="txt_nom" layoutX="316.0" layoutY="134.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="233.0" layoutY="173.0" prefHeight="17.0" prefWidth="83.0" text="Adresse        :" />
+      <TextField fx:id="txt_adress" layoutX="316.0" layoutY="169.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="195.0" layoutY="208.0" prefHeight="17.0" prefWidth="117.0" text="Numero Telephone : " />
+      <TextField fx:id="txt_tel" layoutX="316.0" layoutY="204.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button fx:id="btn_add" layoutX="521.0" layoutY="122.0" mnemonicParsing="false" onMouseClicked="#addFournisseur" prefHeight="25.0" prefWidth="76.0" text="Ajouter" />
+      <Button fx:id="btn_edit" layoutX="521.0" layoutY="161.0" mnemonicParsing="false" onMouseClicked="#editFournisseur" prefHeight="25.0" prefWidth="76.0" text="Modifier" />
+      <Button fx:id="btn_delet" layoutX="521.0" layoutY="196.0" mnemonicParsing="false" onMouseClicked="#deletFournisseur" prefHeight="25.0" prefWidth="76.0" text="Supprimer" />
+      <TableView fx:id="table_fournisseur" layoutX="54.0" layoutY="237.0" prefHeight="260.0" prefWidth="693.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="53.0" AnchorPane.topAnchor="237.0">
+                    <columns>
+          <TableColumn fx:id="fournisseur_id" prefWidth="57.0" text="ID" />
+          <TableColumn fx:id="fournisseur_nom" prefWidth="137.0" text="Nom_fournisseur" />
+            <TableColumn fx:id="fournisseur_address" prefWidth="131.0" text="Adresse_Fournisseur" />
+            <TableColumn fx:id="fournisseur_tel" prefWidth="137.0" text="Numero_Telephone" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txt_serchCIN" layoutX="316.0" layoutY="63.0" promptText="Entrer L'ID a rechercher" />
+      <Button fx:id="btn_serch" layoutX="521.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#serchFournisseur" text="Rechercher" />
+   </children>
+</AnchorPane>

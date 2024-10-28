@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.connectionController">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="330.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="325.0" fitWidth="281.0" layoutX="25.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../OneDrive/Bureau/pharmacie1.PNG" />
+               </image>
+            </ImageView>
+            <Label layoutX="40.0" layoutY="55.0" prefHeight="51.0" prefWidth="223.0" text="   Pharmacist" textAlignment="RIGHT">
+               <font>
+                  <Font size="38.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.1077607199549675" green="0.8026315569877625" blue="0.3393843472003937" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <Label layoutX="86.0" layoutY="471.0" prefHeight="15.0" prefWidth="160.0" text="COPYRIGHT @2023-Pharmacist">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #CDE0CD;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="103.0" layoutY="172.0" text="Nom d'utilisateur :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Label>
+            <Label layoutX="103.0" layoutY="220.0" text="mot de pass :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <InnerShadow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </InnerShadow>
+               </effect>
+            </Label>
+            <Label fx:id="login_label" contentDisplay="BOTTOM" layoutX="186.0" layoutY="81.0" text="Connexion" textFill="#4bcca1">
+               <font>
+                  <Font name="Ebrima" size="26.0" />
+               </font>
+               <effect>
+                  <InnerShadow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </InnerShadow>
+               </effect>
+            </Label>
+            <TextField fx:id="usernameTextfield" alignment="TOP_LEFT" layoutX="253.0" layoutY="160.0" promptText="Username" style="-fx-background-color: WHITE;" />
+            <PasswordField fx:id="passwordfield" layoutX="253.0" layoutY="208.0" prefHeight="25.0" prefWidth="180.0" promptText="Password" style="-fx-background-color: WHITE;" />
+            <Button fx:id="loginButton" layoutX="129.0" layoutY="274.0" mnemonicParsing="false" onAction="#LoginButtonOnAction" prefHeight="25.0" prefWidth="247.0" text="Se Connecter" />
+            <Button fx:id="cancelButton" cancelButton="true" layoutX="129.0" layoutY="319.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="25.0" prefWidth="247.0" text="Annuler" />
+            <Label fx:id="loginLabel" layoutX="89.0" layoutY="137.0" textFill="#ff0101" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
